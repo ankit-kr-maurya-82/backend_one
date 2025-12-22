@@ -24,6 +24,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/register", (req, res) => {
+  res.render("register");
+});
 app.post("/create", (req, res) => {
   let { username, email, password, age } = req.body;
 
