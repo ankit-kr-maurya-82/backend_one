@@ -25,6 +25,12 @@ app.get('/about', (req, res) => {
   
 })
 
+// routes parameter
+app.get('/profile/:username', (req, res) => {
+  res.send(`${req.params.username}!`)
+  // console.log("ankit");
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
