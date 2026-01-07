@@ -6,11 +6,11 @@ const port = 3000
 app.use(express.urlencoded({extended: false}))
 
 app.use((req, res, next)=> {
-    console.log("hello from middle 1");
+    console.log("hello from middle 1 ()={}");
     next()
 })
-app.use((req, res, next)=> {
-    console.log("hello from middle 2");
+app.use(function(req, res, next) {
+    console.log("hello from middle 2 fn(){}");
     next()
 })
 
