@@ -1,9 +1,11 @@
-import express from "epress"
+const express = require('express')
 const app = express()
-const PORT = 8000
+const port = 3000
 
-// Middleware - Plugin
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
-
-
-app.
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
